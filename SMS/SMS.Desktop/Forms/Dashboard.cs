@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SMS.Desktop
+namespace SMS.Desktop.Forms
 {
-	public partial class Form1 : Form
+	public partial class Dashboard : TemplateForm
 	{
-		public Form1()
+		public Dashboard()
 		{
 			InitializeComponent();
+		}
+
+		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }
