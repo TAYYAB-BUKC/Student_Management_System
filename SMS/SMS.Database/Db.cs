@@ -12,6 +12,7 @@ namespace SMS.Database
 	{
 		private string connectionString;
 		private object value;
+		private DataTable dataTable = new DataTable();
 
 		public Db(string connectionString)
 		{
@@ -71,6 +72,67 @@ namespace SMS.Database
 				}
 			}
 			return value;
+		}
+
+		public DataTable GetList(string storedProcedure)
+		{
+			using (SqlConnection sql = new SqlConnection(connectionString))
+			{
+				using (SqlCommand cmd = new SqlCommand(storedProcedure, sql))
+				{
+					sql.Open();
+
+					cmd.CommandType = CommandType.StoredProcedure;
+
+					SqlDataReader dataReader = cmd.ExecuteReader();
+
+					dataTable.Load(dataReader);
+				}
+			}
+			return dataTable;
+		}
+
+		public DataTable GetList(string storedProcedure, DbParameter parameter)
+		{
+			using (SqlConnection sql = new SqlConnection(connectionString))
+			{
+				using (SqlCommand cmd = new SqlCommand(storedProcedure, sql))
+				{
+					sql.Open();
+
+					cmd.CommandType = CommandType.StoredProcedure;
+
+					cmd.Parameters.AddWithValue(parameter.Name, parameter.Value);
+
+					SqlDataReader dataReader = cmd.ExecuteReader();
+
+					dataTable.Load(dataReader);
+				}
+			}
+			return dataTable;
+		}
+
+		public DataTable GetList(string storedProcedure, List<DbParameter> parameters)
+		{
+			using (SqlConnection sql = new SqlConnection(connectionString))
+			{
+				using (SqlCommand cmd = new SqlCommand(storedProcedure, sql))
+				{
+					sql.Open();
+
+					cmd.CommandType = CommandType.StoredProcedure;
+
+					foreach (var parameter in parameters)
+					{
+						cmd.Parameters.AddWithValue(parameter.Name, parameter.Value);
+					}
+
+					SqlDataReader dataReader = cmd.ExecuteReader();
+
+					dataTable.Load(dataReader);
+				}
+			}
+			return dataTable;
 		}
 	}
 }

@@ -12,6 +12,7 @@ namespace SMS.Desktop
 {
 	public partial class TemplateForm : Form
 	{
+		public bool IsUpdate { get; set; }
 		public TemplateForm()
 		{
 			InitializeComponent();

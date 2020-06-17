@@ -32,7 +32,7 @@ namespace SMS.Desktop.Forms
 				List<DbParameter> dbParameters = new List<DbParameter>();
 				GetParameters(dbParameters);
 
-				bool IsCredentialsCorrect = (bool)db.GetValue("CheckUsersCredentials", dbParameters);
+				bool IsCredentialsCorrect = (bool)db.GetValue("Users_CheckUsersCredentials", dbParameters);
 
 				if (IsCredentialsCorrect)
 				{

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMS.Desktop.Forms.Branches;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,13 @@ namespace SMS.Desktop.Forms
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
+		}
+
+		private void ManageBranchesToolStripButton_Click(object sender, EventArgs e)
+		{
+
+			ManageBranches manageBranches = new ManageBranches();
+			manageBranches.Show();
 		}
 	}
 }
