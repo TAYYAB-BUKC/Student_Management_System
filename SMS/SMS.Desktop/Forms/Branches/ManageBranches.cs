@@ -28,7 +28,9 @@ namespace SMS.Desktop.Forms.Branches
 			AddBranch addBranch = new AddBranch();
 			addBranch.IsUpdate = isUpdate;
 			addBranch.BranchId = branchId;
-			addBranch.Show();
+			addBranch.ShowDialog();
+
+			LoadData();
 		}
 
 		private void CloseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,8 +45,14 @@ namespace SMS.Desktop.Forms.Branches
 
 		private void LoadData()
 		{
-
 			ListData.LoadData(BranchesDataGridView, "Branches_GetAllBranches");
+		}
+
+		private void BranchesDataGridView_DoubleClick(object sender, EventArgs e)
+		{
+			int rowIndex = BranchesDataGridView.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+			int branchId = Convert.ToInt32(BranchesDataGridView.Rows[rowIndex].Cells["BranchId"].Value);
+			ShowAddBranch(branchId, true);
 		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using SMS.Database;
+using SMS.Desktop.Models.Users;
 using SMS.Desktop.Utilities;
 using System;
 using System.Collections.Generic;
@@ -33,9 +34,9 @@ namespace SMS.Desktop.Forms
 				GetParameters(dbParameters);
 
 				bool IsCredentialsCorrect = (bool)db.GetValue("Users_CheckUsersCredentials", dbParameters);
-
 				if (IsCredentialsCorrect)
 				{
+					LoggedInUser.Username = UsernameTextBox.Text;
 					this.Hide();
 
 					Dashboard dashboard = new Dashboard();

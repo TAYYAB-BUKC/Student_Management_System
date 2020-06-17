@@ -14,10 +14,21 @@ namespace SMS.Desktop.Utilities.Lists
 		public static void LoadData(DataGridView dataGridView, string procedureName)
 		{
 			dataGridView.DataSource = db.GetList(procedureName);
+
 			dataGridView.MultiSelect = false;
 			dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+		}
 
+		public static void LoadData(ComboBox comboBox, DbParameter parameter)
+		{
+			
+			comboBox.DataSource = db.GetList("ListTypes_GetListTypesByID", parameter);
+
+			comboBox.DisplayMember = "Description";
+			comboBox.ValueMember = "Id";
+			comboBox.SelectedIndex = -1;
+			comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 		}
 	}
 }

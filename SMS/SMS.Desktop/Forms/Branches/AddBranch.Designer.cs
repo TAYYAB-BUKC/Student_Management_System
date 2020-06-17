@@ -28,10 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-			this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.addNewBranchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.TopPanel = new System.Windows.Forms.Panel();
 			this.DistrictComboBox = new System.Windows.Forms.ComboBox();
 			this.CityComboBox = new System.Windows.Forms.ComboBox();
@@ -50,44 +46,13 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.NameTextBox = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
-			this.LogoPictureBox = new System.Windows.Forms.PictureBox();
 			this.LabelTopPanel = new System.Windows.Forms.Panel();
 			this.CollegeLabel = new System.Windows.Forms.Label();
-			this.menuStrip1.SuspendLayout();
+			this.LogoPictureBox = new System.Windows.Forms.PictureBox();
 			this.TopPanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
 			this.LabelTopPanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// menuStrip1
-			// 
-			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.closeToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.addNewBranchToolStripMenuItem});
-			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(752, 24);
-			this.menuStrip1.TabIndex = 1;
-			this.menuStrip1.Text = "menuStrip1";
-			// 
-			// closeToolStripMenuItem
-			// 
-			this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-			this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-			this.closeToolStripMenuItem.Text = "Close";
-			// 
-			// toolStripMenuItem1
-			// 
-			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 20);
-			this.toolStripMenuItem1.Text = "|";
-			// 
-			// addNewBranchToolStripMenuItem
-			// 
-			this.addNewBranchToolStripMenuItem.Name = "addNewBranchToolStripMenuItem";
-			this.addNewBranchToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-			this.addNewBranchToolStripMenuItem.Text = "Add Branch";
 			// 
 			// TopPanel
 			// 
@@ -111,7 +76,7 @@
 			this.TopPanel.Controls.Add(this.label1);
 			this.TopPanel.Controls.Add(this.LogoPictureBox);
 			this.TopPanel.Controls.Add(this.LabelTopPanel);
-			this.TopPanel.Location = new System.Drawing.Point(13, 44);
+			this.TopPanel.Location = new System.Drawing.Point(12, 12);
 			this.TopPanel.Name = "TopPanel";
 			this.TopPanel.Size = new System.Drawing.Size(728, 504);
 			this.TopPanel.TabIndex = 2;
@@ -137,12 +102,13 @@
 			// AddBranchButton
 			// 
 			this.AddBranchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.AddBranchButton.Location = new System.Drawing.Point(510, 454);
+			this.AddBranchButton.Location = new System.Drawing.Point(520, 453);
 			this.AddBranchButton.Name = "AddBranchButton";
 			this.AddBranchButton.Size = new System.Drawing.Size(141, 30);
 			this.AddBranchButton.TabIndex = 21;
 			this.AddBranchButton.Text = "Add Branch";
 			this.AddBranchButton.UseVisualStyleBackColor = true;
+			this.AddBranchButton.Click += new System.EventHandler(this.AddBranchButton_Click);
 			// 
 			// PostalCodeTextBox
 			// 
@@ -273,15 +239,6 @@
 			this.label1.TabIndex = 6;
 			this.label1.Text = "Branch Name: ";
 			// 
-			// LogoPictureBox
-			// 
-			this.LogoPictureBox.BackColor = System.Drawing.Color.White;
-			this.LogoPictureBox.Location = new System.Drawing.Point(44, 14);
-			this.LogoPictureBox.Name = "LogoPictureBox";
-			this.LogoPictureBox.Size = new System.Drawing.Size(263, 248);
-			this.LogoPictureBox.TabIndex = 4;
-			this.LogoPictureBox.TabStop = false;
-			// 
 			// LabelTopPanel
 			// 
 			this.LabelTopPanel.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -303,33 +260,36 @@
 			this.CollegeLabel.TabIndex = 5;
 			this.CollegeLabel.Text = "PAF Fazaia College";
 			// 
+			// LogoPictureBox
+			// 
+			this.LogoPictureBox.BackColor = System.Drawing.Color.White;
+			this.LogoPictureBox.Location = new System.Drawing.Point(14, 14);
+			this.LogoPictureBox.Name = "LogoPictureBox";
+			this.LogoPictureBox.Size = new System.Drawing.Size(293, 294);
+			this.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.LogoPictureBox.TabIndex = 4;
+			this.LogoPictureBox.TabStop = false;
+			this.LogoPictureBox.Click += new System.EventHandler(this.LogoPictureBox_Click);
+			// 
 			// AddBranch
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(752, 554);
+			this.ClientSize = new System.Drawing.Size(752, 525);
 			this.Controls.Add(this.TopPanel);
-			this.Controls.Add(this.menuStrip1);
 			this.Name = "AddBranch";
 			this.Text = "Add Branch";
-			this.menuStrip1.ResumeLayout(false);
-			this.menuStrip1.PerformLayout();
+			this.Load += new System.EventHandler(this.AddBranch_Load);
 			this.TopPanel.ResumeLayout(false);
 			this.TopPanel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
 			this.LabelTopPanel.ResumeLayout(false);
 			this.LabelTopPanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.MenuStrip menuStrip1;
-		private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem addNewBranchToolStripMenuItem;
 		private System.Windows.Forms.Panel TopPanel;
 		private System.Windows.Forms.Panel LabelTopPanel;
 		private System.Windows.Forms.PictureBox LogoPictureBox;

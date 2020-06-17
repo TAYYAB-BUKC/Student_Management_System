@@ -73,6 +73,16 @@ namespace SMS.Desktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap default_img {
+            get {
+                object obj = ResourceManager.GetObject("default-img", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Edit_Profile {
             get {
                 object obj = ResourceManager.GetObject("Edit Profile", resourceCulture);
@@ -106,6 +116,16 @@ namespace SMS.Desktop.Properties {
         internal static System.Drawing.Bitmap New_Student {
             get {
                 object obj = ResourceManager.GetObject("New Student", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap noimage {
+            get {
+                object obj = ResourceManager.GetObject("noimage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -79,6 +79,7 @@
 			this.BranchesDataGridView.ReadOnly = true;
 			this.BranchesDataGridView.Size = new System.Drawing.Size(633, 515);
 			this.BranchesDataGridView.TabIndex = 1;
+			this.BranchesDataGridView.DoubleClick += new System.EventHandler(this.BranchesDataGridView_DoubleClick);
 			// 
 			// ManageBranches
 			// 

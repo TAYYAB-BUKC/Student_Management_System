@@ -70,6 +70,8 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Branches\Branch.cs" />
+    <Compile Include="Models\Users\LoggedInUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\TemplateForm.cs">
@@ -79,7 +81,9 @@
       <DependentUpon>TemplateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\AppSettings.cs" />
+    <Compile Include="Utilities\ImageManipulation.cs" />
     <Compile Include="Utilities\Lists\ListData.cs" />
+    <Compile Include="Utilities\SystemEnums.cs" />
     <EmbeddedResource Include="Forms\Branches\AddBranch.resx">
       <DependentUpon>AddBranch.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +148,16 @@
       <Project>{8D888827-4A60-4AE3-AD0D-DB11111449A2}</Project>
       <Name>SMS.Database</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\default-img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\logo.jpg" />
+    <Content Include="Resources\Logo2.png" />
+    <Content Include="Resources\noimage.png" />
+    <Content Include="Resources\PAF.jpg" />
+    <Content Include="Resources\student.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
