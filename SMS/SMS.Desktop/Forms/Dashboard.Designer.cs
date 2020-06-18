@@ -31,15 +31,23 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,28 +60,20 @@
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.NewStudentToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			this.ManageBranchesToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
 			this.EditProfileToolStripButton = new System.Windows.Forms.ToolStripButton();
-			this.ManageUsersToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+			this.ManageEmployeesToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
 			this.ManageReportsToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
 			this.SystemSetupToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
 			this.HelpToolStripButton = new System.Windows.Forms.ToolStripButton();
-			this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.menuStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -109,10 +109,37 @@
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
 			this.fileToolStripMenuItem.Text = "&File";
 			// 
+			// newToolStripMenuItem
+			// 
+			this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
+			this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+			this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+			this.newToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+			this.newToolStripMenuItem.Text = "&New";
+			// 
+			// openToolStripMenuItem
+			// 
+			this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
+			this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+			this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+			this.openToolStripMenuItem.Text = "&Open";
+			// 
 			// toolStripSeparator
 			// 
 			this.toolStripSeparator.Name = "toolStripSeparator";
 			this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
+			// 
+			// saveToolStripMenuItem
+			// 
+			this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
+			this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+			this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+			this.saveToolStripMenuItem.Text = "&Save";
 			// 
 			// saveAsToolStripMenuItem
 			// 
@@ -124,6 +151,23 @@
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
+			// 
+			// printToolStripMenuItem
+			// 
+			this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
+			this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+			this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+			this.printToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+			this.printToolStripMenuItem.Text = "&Print";
+			// 
+			// printPreviewToolStripMenuItem
+			// 
+			this.printPreviewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem.Image")));
+			this.printPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
+			this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+			this.printPreviewToolStripMenuItem.Text = "Print Pre&view";
 			// 
 			// toolStripSeparator2
 			// 
@@ -170,6 +214,33 @@
 			// 
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
 			this.toolStripSeparator3.Size = new System.Drawing.Size(141, 6);
+			// 
+			// cutToolStripMenuItem
+			// 
+			this.cutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripMenuItem.Image")));
+			this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
+			this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+			this.cutToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+			this.cutToolStripMenuItem.Text = "Cu&t";
+			// 
+			// copyToolStripMenuItem
+			// 
+			this.copyToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripMenuItem.Image")));
+			this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+			this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+			this.copyToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+			this.copyToolStripMenuItem.Text = "&Copy";
+			// 
+			// pasteToolStripMenuItem
+			// 
+			this.pasteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripMenuItem.Image")));
+			this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+			this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+			this.pasteToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+			this.pasteToolStripMenuItem.Text = "&Paste";
 			// 
 			// toolStripSeparator4
 			// 
@@ -253,7 +324,7 @@
             this.toolStripSeparator7,
             this.EditProfileToolStripButton,
             this.toolStripSeparator8,
-            this.ManageUsersToolStripButton,
+            this.ManageEmployeesToolStripButton,
             this.toolStripSeparator9,
             this.ManageReportsToolStripButton,
             this.toolStripSeparator10,
@@ -262,39 +333,112 @@
             this.HelpToolStripButton});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 24);
 			this.toolStrip1.Name = "toolStrip1";
+			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
 			this.toolStrip1.Size = new System.Drawing.Size(915, 44);
 			this.toolStrip1.TabIndex = 1;
 			this.toolStrip1.Text = "toolStrip1";
+			// 
+			// NewStudentToolStripButton
+			// 
+			this.NewStudentToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.NewStudentToolStripButton.Image = global::SMS.Desktop.Properties.Resources.New_Student;
+			this.NewStudentToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.NewStudentToolStripButton.Name = "NewStudentToolStripButton";
+			this.NewStudentToolStripButton.Size = new System.Drawing.Size(103, 41);
+			this.NewStudentToolStripButton.Text = "New Student";
+			this.NewStudentToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			// 
 			// toolStripSeparator6
 			// 
 			this.toolStripSeparator6.Name = "toolStripSeparator6";
 			this.toolStripSeparator6.Size = new System.Drawing.Size(6, 44);
 			// 
+			// ManageBranchesToolStripButton
+			// 
+			this.ManageBranchesToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ManageBranchesToolStripButton.Image = global::SMS.Desktop.Properties.Resources.branches;
+			this.ManageBranchesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.ManageBranchesToolStripButton.Name = "ManageBranchesToolStripButton";
+			this.ManageBranchesToolStripButton.Size = new System.Drawing.Size(137, 41);
+			this.ManageBranchesToolStripButton.Text = "Manage Branches";
+			this.ManageBranchesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.ManageBranchesToolStripButton.Click += new System.EventHandler(this.ManageBranchesToolStripButton_Click);
+			// 
 			// toolStripSeparator7
 			// 
 			this.toolStripSeparator7.Name = "toolStripSeparator7";
 			this.toolStripSeparator7.Size = new System.Drawing.Size(6, 44);
+			// 
+			// EditProfileToolStripButton
+			// 
+			this.EditProfileToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.EditProfileToolStripButton.Image = global::SMS.Desktop.Properties.Resources.Edit_Profile;
+			this.EditProfileToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.EditProfileToolStripButton.Name = "EditProfileToolStripButton";
+			this.EditProfileToolStripButton.Size = new System.Drawing.Size(89, 41);
+			this.EditProfileToolStripButton.Text = "Edit Profile";
+			this.EditProfileToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			// 
 			// toolStripSeparator8
 			// 
 			this.toolStripSeparator8.Name = "toolStripSeparator8";
 			this.toolStripSeparator8.Size = new System.Drawing.Size(6, 44);
 			// 
+			// ManageEmployeesToolStripButton
+			// 
+			this.ManageEmployeesToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ManageEmployeesToolStripButton.Image = global::SMS.Desktop.Properties.Resources.manatge_users;
+			this.ManageEmployeesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.ManageEmployeesToolStripButton.Name = "ManageEmployeesToolStripButton";
+			this.ManageEmployeesToolStripButton.Size = new System.Drawing.Size(149, 41);
+			this.ManageEmployeesToolStripButton.Text = "Manage Employees";
+			this.ManageEmployeesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.ManageEmployeesToolStripButton.Click += new System.EventHandler(this.ManageEmployeesToolStripButton_Click);
+			// 
 			// toolStripSeparator9
 			// 
 			this.toolStripSeparator9.Name = "toolStripSeparator9";
 			this.toolStripSeparator9.Size = new System.Drawing.Size(6, 44);
+			// 
+			// ManageReportsToolStripButton
+			// 
+			this.ManageReportsToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ManageReportsToolStripButton.Image = global::SMS.Desktop.Properties.Resources.reports;
+			this.ManageReportsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.ManageReportsToolStripButton.Name = "ManageReportsToolStripButton";
+			this.ManageReportsToolStripButton.Size = new System.Drawing.Size(128, 41);
+			this.ManageReportsToolStripButton.Text = "Manage Reports";
+			this.ManageReportsToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			// 
 			// toolStripSeparator10
 			// 
 			this.toolStripSeparator10.Name = "toolStripSeparator10";
 			this.toolStripSeparator10.Size = new System.Drawing.Size(6, 44);
 			// 
+			// SystemSetupToolStripButton
+			// 
+			this.SystemSetupToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.SystemSetupToolStripButton.Image = global::SMS.Desktop.Properties.Resources.system;
+			this.SystemSetupToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.SystemSetupToolStripButton.Name = "SystemSetupToolStripButton";
+			this.SystemSetupToolStripButton.Size = new System.Drawing.Size(109, 41);
+			this.SystemSetupToolStripButton.Text = "System Setup";
+			this.SystemSetupToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			// 
 			// toolStripSeparator11
 			// 
 			this.toolStripSeparator11.Name = "toolStripSeparator11";
 			this.toolStripSeparator11.Size = new System.Drawing.Size(6, 44);
+			// 
+			// HelpToolStripButton
+			// 
+			this.HelpToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.HelpToolStripButton.Image = global::SMS.Desktop.Properties.Resources.help;
+			this.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.HelpToolStripButton.Name = "HelpToolStripButton";
+			this.HelpToolStripButton.Size = new System.Drawing.Size(123, 41);
+			this.HelpToolStripButton.Text = "Help && Support";
+			this.HelpToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			// 
 			// dataGridView1
 			// 
@@ -309,148 +453,6 @@
 			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.Size = new System.Drawing.Size(894, 364);
 			this.dataGridView1.TabIndex = 2;
-			// 
-			// NewStudentToolStripButton
-			// 
-			this.NewStudentToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.NewStudentToolStripButton.Image = global::SMS.Desktop.Properties.Resources.New_Student;
-			this.NewStudentToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.NewStudentToolStripButton.Name = "NewStudentToolStripButton";
-			this.NewStudentToolStripButton.Size = new System.Drawing.Size(103, 41);
-			this.NewStudentToolStripButton.Text = "New Student";
-			this.NewStudentToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-			// 
-			// ManageBranchesToolStripButton
-			// 
-			this.ManageBranchesToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ManageBranchesToolStripButton.Image = global::SMS.Desktop.Properties.Resources.branches;
-			this.ManageBranchesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.ManageBranchesToolStripButton.Name = "ManageBranchesToolStripButton";
-			this.ManageBranchesToolStripButton.Size = new System.Drawing.Size(137, 41);
-			this.ManageBranchesToolStripButton.Text = "Manage Branches";
-			this.ManageBranchesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-			this.ManageBranchesToolStripButton.Click += new System.EventHandler(this.ManageBranchesToolStripButton_Click);
-			// 
-			// EditProfileToolStripButton
-			// 
-			this.EditProfileToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.EditProfileToolStripButton.Image = global::SMS.Desktop.Properties.Resources.Edit_Profile;
-			this.EditProfileToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.EditProfileToolStripButton.Name = "EditProfileToolStripButton";
-			this.EditProfileToolStripButton.Size = new System.Drawing.Size(89, 41);
-			this.EditProfileToolStripButton.Text = "Edit Profile";
-			this.EditProfileToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-			// 
-			// ManageUsersToolStripButton
-			// 
-			this.ManageUsersToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ManageUsersToolStripButton.Image = global::SMS.Desktop.Properties.Resources.manatge_users;
-			this.ManageUsersToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.ManageUsersToolStripButton.Name = "ManageUsersToolStripButton";
-			this.ManageUsersToolStripButton.Size = new System.Drawing.Size(113, 41);
-			this.ManageUsersToolStripButton.Text = "Manage Users";
-			this.ManageUsersToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-			// 
-			// ManageReportsToolStripButton
-			// 
-			this.ManageReportsToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ManageReportsToolStripButton.Image = global::SMS.Desktop.Properties.Resources.reports;
-			this.ManageReportsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.ManageReportsToolStripButton.Name = "ManageReportsToolStripButton";
-			this.ManageReportsToolStripButton.Size = new System.Drawing.Size(128, 41);
-			this.ManageReportsToolStripButton.Text = "Manage Reports";
-			this.ManageReportsToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-			// 
-			// SystemSetupToolStripButton
-			// 
-			this.SystemSetupToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.SystemSetupToolStripButton.Image = global::SMS.Desktop.Properties.Resources.system;
-			this.SystemSetupToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.SystemSetupToolStripButton.Name = "SystemSetupToolStripButton";
-			this.SystemSetupToolStripButton.Size = new System.Drawing.Size(109, 41);
-			this.SystemSetupToolStripButton.Text = "System Setup";
-			this.SystemSetupToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-			// 
-			// HelpToolStripButton
-			// 
-			this.HelpToolStripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.HelpToolStripButton.Image = global::SMS.Desktop.Properties.Resources.help;
-			this.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.HelpToolStripButton.Name = "HelpToolStripButton";
-			this.HelpToolStripButton.Size = new System.Drawing.Size(123, 41);
-			this.HelpToolStripButton.Text = "Help && Support";
-			this.HelpToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-			// 
-			// newToolStripMenuItem
-			// 
-			this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
-			this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-			this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-			this.newToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-			this.newToolStripMenuItem.Text = "&New";
-			// 
-			// openToolStripMenuItem
-			// 
-			this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
-			this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-			this.openToolStripMenuItem.Text = "&Open";
-			// 
-			// saveToolStripMenuItem
-			// 
-			this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
-			this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-			this.saveToolStripMenuItem.Text = "&Save";
-			// 
-			// printToolStripMenuItem
-			// 
-			this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
-			this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-			this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-			this.printToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-			this.printToolStripMenuItem.Text = "&Print";
-			// 
-			// printPreviewToolStripMenuItem
-			// 
-			this.printPreviewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem.Image")));
-			this.printPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-			this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-			this.printPreviewToolStripMenuItem.Text = "Print Pre&view";
-			// 
-			// cutToolStripMenuItem
-			// 
-			this.cutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripMenuItem.Image")));
-			this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-			this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-			this.cutToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-			this.cutToolStripMenuItem.Text = "Cu&t";
-			// 
-			// copyToolStripMenuItem
-			// 
-			this.copyToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripMenuItem.Image")));
-			this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-			this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-			this.copyToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-			this.copyToolStripMenuItem.Text = "&Copy";
-			// 
-			// pasteToolStripMenuItem
-			// 
-			this.pasteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripMenuItem.Image")));
-			this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-			this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-			this.pasteToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-			this.pasteToolStripMenuItem.Text = "&Paste";
 			// 
 			// Dashboard
 			// 
@@ -516,7 +518,7 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
 		private System.Windows.Forms.ToolStripButton EditProfileToolStripButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-		private System.Windows.Forms.ToolStripButton ManageUsersToolStripButton;
+		private System.Windows.Forms.ToolStripButton ManageEmployeesToolStripButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
 		private System.Windows.Forms.ToolStripButton ManageReportsToolStripButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;

@@ -1,4 +1,5 @@
 ﻿using SMS.Desktop.Forms.Branches;
+using SMS.Desktop.Forms.Employees;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,9 +26,14 @@ namespace SMS.Desktop.Forms
 
 		private void ManageBranchesToolStripButton_Click(object sender, EventArgs e)
 		{
-
 			ManageBranches manageBranches = new ManageBranches();
 			manageBranches.Show();
+		}
+
+		private void ManageEmployeesToolStripButton_Click(object sender, EventArgs e)
+		{
+			ManageEmployees manageEmployees = new ManageEmployees();
+			manageEmployees.Show();
 		}
 	}
 }
