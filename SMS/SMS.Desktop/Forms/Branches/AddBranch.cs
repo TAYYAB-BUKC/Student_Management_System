@@ -1,5 +1,4 @@
 ﻿using SMS.Database;
-using SMS.Database.DesktopMessage;
 using SMS.Desktop.Models.Branches;
 using SMS.Desktop.Models.Users;
 using SMS.Desktop.Properties;
@@ -96,12 +95,12 @@ namespace SMS.Desktop.Forms.Branches
 				if (this.IsUpdate)
 				{
 					AddOrUpdateBranch("Branches_UpdateBranch");
-					Messages.ShowSuccessMessage("Branch is updated successfully");
+					MessageBox.Show("Branch is updated successfully", "Sucess Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 				else
 				{
 					AddOrUpdateBranch("Branches_AddNewBranch");
-					Messages.ShowSuccessMessage("Branch is added successfully");
+					MessageBox.Show("Branch is added successfully", "Sucess Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 				this.Close();
 			}
@@ -133,21 +132,21 @@ namespace SMS.Desktop.Forms.Branches
 		{
 			if (NameTextBox.Text.Trim() == string.Empty)
 			{
-				Messages.ShowErrorMessage("Name is required");
+				MessageBox.Show("Name is required", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				NameTextBox.Clear();
 				NameTextBox.Focus();
 				return false;
 			}
 			if (EmailTextBox.Text.Trim() == string.Empty)
 			{
-				Messages.ShowErrorMessage("Email is required");
+				MessageBox.Show("Email is required", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				EmailTextBox.Clear();
 				EmailTextBox.Focus();
 				return false;
 			}
 			if (TelephoneTextBox.Text.Trim() == string.Empty)
 			{
-				Messages.ShowErrorMessage("Telephone is required");
+				MessageBox.Show("Name is required", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				TelephoneTextBox.Clear();
 				TelephoneTextBox.Focus();
 				return false;

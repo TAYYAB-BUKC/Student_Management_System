@@ -64,18 +64,6 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Employees\AddEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Employees\AddEmployee.Designer.cs">
-      <DependentUpon>AddEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Employees\ManageEmployees.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Employees\ManageEmployees.Designer.cs">
-      <DependentUpon>ManageEmployees.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,7 +71,6 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Branches\Branch.cs" />
-    <Compile Include="Models\Employees\Employee.cs" />
     <Compile Include="Models\Users\LoggedInUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,12 +92,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Employees\AddEmployee.resx">
-      <DependentUpon>AddEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Employees\ManageEmployees.resx">
-      <DependentUpon>ManageEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -169,18 +150,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\close.png" />
-    <None Include="Resources\close %281%29.png" />
     <Content Include="Resources\default-img.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\image.png" />
     <Content Include="Resources\logo.jpg" />
     <Content Include="Resources\Logo2.png" />
     <Content Include="Resources\noimage.png" />
     <Content Include="Resources\PAF.jpg" />
     <Content Include="Resources\student.ico" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

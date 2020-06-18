@@ -30,38 +30,5 @@ namespace SMS.Desktop.Utilities.Lists
 			comboBox.SelectedIndex = -1;
 			comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 		}
-
-		public static void LoadData(ComboBox comboBox, string storedProcedure)
-		{
-
-			comboBox.DataSource = db.GetList(storedProcedure);
-
-			comboBox.DisplayMember = "Description";
-			comboBox.ValueMember = "Id";
-			comboBox.SelectedIndex = -1;
-			comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-		}
-
-		public static void LoadData(ComboBox comboBox, string storedProcedure, DbParameter parameter)
-		{
-
-			comboBox.DataSource = db.GetList(storedProcedure, parameter);
-
-			comboBox.DisplayMember = "Description";
-			comboBox.ValueMember = "Id";
-			comboBox.SelectedIndex = -1;
-			comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-		}
-
-		public static void LoadData(ComboBox comboBox, string storedProcedure, List<DbParameter> parameters)
-		{
-
-			comboBox.DataSource = db.GetList(storedProcedure, parameters);
-
-			comboBox.DisplayMember = "Description";
-			comboBox.ValueMember = "Id";
-			comboBox.SelectedIndex = -1;
-			comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-		}
 	}
 }
