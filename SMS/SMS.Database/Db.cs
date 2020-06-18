@@ -77,7 +77,7 @@ namespace SMS.Database
 
 		public DataTable GetList(string storedProcedure)
 		{
-			if (dataTable.Rows.Count > 0)
+			if (dataTable.Rows.Count >= 0)
 			{
 				dataTable = new DataTable();
 			}
@@ -99,7 +99,7 @@ namespace SMS.Database
 
 		public DataTable GetList(string storedProcedure, DbParameter parameter)
 		{
-			if (dataTable.Rows.Count > 0)
+			if (dataTable.Rows.Count >= 0)
 			{
 				dataTable = new DataTable();
 			}
@@ -123,7 +123,7 @@ namespace SMS.Database
 
 		public DataTable GetList(string storedProcedure, List<DbParameter> parameters)
 		{
-			if (dataTable.Rows.Count > 0)
+			if (dataTable.Rows.Count >= 0)
 			{
 				dataTable = new DataTable();
 			}

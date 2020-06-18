@@ -1,4 +1,5 @@
 ﻿using SMS.Database;
+using SMS.Database.DesktopMessage;
 using SMS.Desktop.Models.Users;
 using SMS.Desktop.Utilities;
 using System;
@@ -44,8 +45,7 @@ namespace SMS.Desktop.Forms
 				}
 				else
 				{
-					MessageBox.Show("Incorrect Credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+					Messages.ShowErrorMessage("Incorrect Credentials");
 				}
 			}
 		}
@@ -60,14 +60,14 @@ namespace SMS.Desktop.Forms
 		{
 			if (UsernameTextBox.Text.Trim() == String.Empty)
 			{
-				MessageBox.Show("Username is required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Messages.ShowErrorMessage("Username is required");
 				UsernameTextBox.Clear();
 				UsernameTextBox.Focus(); 
 				return false;
 			}
 			if (PasswordTextBox.Text.Trim() == String.Empty)
 			{
-				MessageBox.Show("Password is required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Messages.ShowErrorMessage("Password is required");
 				PasswordTextBox.Clear();
 				PasswordTextBox.Focus();
 				return false;
