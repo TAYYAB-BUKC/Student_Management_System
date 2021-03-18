@@ -46,5 +46,12 @@ namespace SMS.Desktop.Forms.Employees
 		{
 			ListData.LoadData(EmployeesDataGridView, "Employees_GetAllEmployees");
 		}
+
+		private void EmployeesDataGridView_DoubleClick(object sender, EventArgs e)
+		{
+			int rowIndex = EmployeesDataGridView.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+			int employeeId = (int)EmployeesDataGridView.Rows[rowIndex].Cells[0].Value;
+			ShowAddEmployee(employeeId, true);
+		}
 	}
 }

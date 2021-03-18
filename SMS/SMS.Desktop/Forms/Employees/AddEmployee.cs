@@ -3,6 +3,7 @@ using SMS.Database.DesktopMessage;
 using SMS.Desktop.Models;
 using SMS.Desktop.Models.Branches;
 using SMS.Desktop.Models.Users;
+using SMS.Desktop.Properties;
 using SMS.Desktop.Utilities;
 using SMS.Desktop.Utilities.Lists;
 using System;
@@ -39,13 +40,49 @@ namespace SMS.Desktop.Forms.Employees
 			if (this.IsUpdate)
 			{
 				//update procedure
- 			}
+				AddEmployeeToolStripMenuItem.Text = "Update Employee";
+				this.Text = "Update Employee";
+				EnableButtons();
+				LoadDataIfUpdate();
+			}
 			else
 			{
 				//insert procedure
 				GenerateEmployeeID();
 			}
 		}
+
+		private void LoadDataIfUpdate()
+		{
+			DataRow dataRow = db.GetList("Employees_GetEmployeeByEmployeeId", new DbParameter() { Name = "@EmployeeId", Value = EmployeeId }).Rows[0];
+			EmployeeIDTextBox.Text = EmployeeId.ToString();
+			EmployeeNameTextBox.Text = dataRow["Name"].ToString();
+			DateOfBirthDateTimePicker.Value = Convert.ToDateTime(dataRow["DateOfBirth"]);
+			CNICTextBox.Text = dataRow["CNIC"].ToString();
+			EmailTextBox.Text = dataRow["Email"].ToString();              
+			MobileTextBox.Text = dataRow["Mobile"].ToString();
+			TelephoneTextBox.Text = dataRow["Telephone"].ToString();
+			GenderComboBox.SelectedValue = dataRow["GenderId"];
+			EmploymentDateDateTimePicker.Value = Convert.ToDateTime(dataRow["EmploymentDate"]);
+			//if (Convert.ToInt32(dataRow["BranchId"]) != 0)
+			//{
+				BranchComboBox.SelectedValue = dataRow["BranchId"];
+			//}
+			AddressLineTextBox.Text = dataRow["AddressLine"].ToString();
+			CityComboBox.SelectedValue = dataRow["CityId"];
+			DistrictComboBox.SelectedValue = dataRow["DistrictId"];
+			PostalCodeTextBox.Text = dataRow["PostalCode"].ToString();
+			JobTitleComboBox.SelectedValue = dataRow["JobTitleId"];
+			StartingSalaryTextBox.Text = dataRow["StartingSalary"].ToString();
+			CurrentSalaryTextBox.Text = dataRow["CurrentSalary"].ToString();
+			PicturePictureBox.Image = dataRow["Picture"] is DBNull ? Resources.noimage : ImageManipulation.ConvertBytesIntoImage((byte[])dataRow["Picture"]);
+			HasLeftComboBox.Text = ((bool)dataRow["HasLeft"]) ? "Yes" : "No";
+			DateLeftDateTimePicker.Value = Convert.ToDateTime(dataRow["DateLeft"]);
+			LeftReasonComboBox.SelectedValue = dataRow["ReasonLeftId"];
+			LeavingCommentsTextBox.Text = dataRow["Comments"].ToString();
+		}
+
+
 		private void LoadData()
 		{
 			FillData(CityComboBox, ListTypes.City);
@@ -107,8 +144,18 @@ namespace SMS.Desktop.Forms.Employees
 				{
 					AddOrUpdateEmployee("Employees_AddNewEmployee");
 					Messages.ShowSuccessMessage("Employee added successfully");
+
+					this.IsUpdate = true;
+					EnableButtons();
 				}
 			}
+		}
+
+		private void EnableButtons()
+		{
+			AddEmployeeToolStripMenuItem.Enabled = true;
+			SendToolStripMenuItem.Enabled = true;
+			PrintToolStripMenuItem.Enabled = true;
 		}
 
 		private void AddOrUpdateEmployee(string procedureName)

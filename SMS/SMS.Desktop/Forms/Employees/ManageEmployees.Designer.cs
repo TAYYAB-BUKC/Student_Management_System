@@ -50,6 +50,7 @@
 			this.EmployeesDataGridView.ReadOnly = true;
 			this.EmployeesDataGridView.Size = new System.Drawing.Size(633, 515);
 			this.EmployeesDataGridView.TabIndex = 3;
+			this.EmployeesDataGridView.DoubleClick += new System.EventHandler(this.EmployeesDataGridView_DoubleClick);
 			// 
 			// menuStrip1
 			// 

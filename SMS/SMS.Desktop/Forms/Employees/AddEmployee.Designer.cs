@@ -33,11 +33,11 @@
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.AddEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-			this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-			this.sendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.SendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-			this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.PrintToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.TopPanel = new System.Windows.Forms.Panel();
 			this.UnSelectPictureBox = new System.Windows.Forms.PictureBox();
 			this.SelectPictureBox = new System.Windows.Forms.PictureBox();
@@ -121,11 +121,11 @@
             this.toolStripMenuItem1,
             this.AddEmployeeToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.addToolStripMenuItem,
+            this.AddToolStripMenuItem,
             this.toolStripMenuItem3,
-            this.sendToolStripMenuItem,
+            this.SendToolStripMenuItem,
             this.toolStripMenuItem4,
-            this.printToolStripMenuItem});
+            this.PrintToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(1058, 24);
@@ -159,12 +159,12 @@
 			this.toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
 			this.toolStripMenuItem2.Text = "|";
 			// 
-			// addToolStripMenuItem
+			// AddToolStripMenuItem
 			// 
-			this.addToolStripMenuItem.Enabled = false;
-			this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-			this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-			this.addToolStripMenuItem.Text = "Add";
+			this.AddToolStripMenuItem.Enabled = false;
+			this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
+			this.AddToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+			this.AddToolStripMenuItem.Text = "Add";
 			// 
 			// toolStripMenuItem3
 			// 
@@ -173,12 +173,12 @@
 			this.toolStripMenuItem3.Size = new System.Drawing.Size(22, 20);
 			this.toolStripMenuItem3.Text = "|";
 			// 
-			// sendToolStripMenuItem
+			// SendToolStripMenuItem
 			// 
-			this.sendToolStripMenuItem.Enabled = false;
-			this.sendToolStripMenuItem.Name = "sendToolStripMenuItem";
-			this.sendToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-			this.sendToolStripMenuItem.Text = "Send";
+			this.SendToolStripMenuItem.Enabled = false;
+			this.SendToolStripMenuItem.Name = "SendToolStripMenuItem";
+			this.SendToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+			this.SendToolStripMenuItem.Text = "Send";
 			// 
 			// toolStripMenuItem4
 			// 
@@ -187,12 +187,12 @@
 			this.toolStripMenuItem4.Size = new System.Drawing.Size(22, 20);
 			this.toolStripMenuItem4.Text = "|";
 			// 
-			// printToolStripMenuItem
+			// PrintToolStripMenuItem
 			// 
-			this.printToolStripMenuItem.Enabled = false;
-			this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-			this.printToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-			this.printToolStripMenuItem.Text = "Print";
+			this.PrintToolStripMenuItem.Enabled = false;
+			this.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem";
+			this.PrintToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+			this.PrintToolStripMenuItem.Text = "Print";
 			// 
 			// TopPanel
 			// 
@@ -845,11 +845,11 @@
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem AddEmployeeToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-		private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem AddToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-		private System.Windows.Forms.ToolStripMenuItem sendToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem SendToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-		private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem PrintToolStripMenuItem;
 		private System.Windows.Forms.Panel TopPanel;
 		private System.Windows.Forms.TextBox CNICTextBox;
 		private System.Windows.Forms.Label label10;
